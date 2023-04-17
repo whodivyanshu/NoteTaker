@@ -1,0 +1,26 @@
+body{
+    height: 100%;
+    background-image: url(./images/23.jpg);
+    padding: 60px;
+}
+.main{
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+.mleft{
+    height: 500px;
+    width: 50%;
+    background-color: rgb(250, 102, 255);
+}
+.mlogin{
+    width: 80%;
+    margin: auto;
+}
+.mright{
+    width: 50%;
+    height: 500px;
+    background-image: url(./images/22.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}

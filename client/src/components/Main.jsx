@@ -5,10 +5,17 @@ const Main = () => {
     <div className="main">
         <div className="mleft">
             <div className="mlogin">
-                <h1>Hello, User</h1>
-                <input type="text" />
-                <input type="text" />
+
+                <h1>Welcome to NoteTaker</h1>
+              <form action="/" method="post">
+                <input type="text" placeholder='username' />
+                <br />
+                <input type="password" placeholder='password' />
+                <p>Forgot Password</p>
+
+                <br />
                 <button>Sign In</button>
+              </form>
             </div>
         </div>
         <div className="mright">

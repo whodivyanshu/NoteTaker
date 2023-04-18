@@ -1,26 +1,99 @@
+/* Default styles */
+
 body{
     height: 100%;
-    background-image: url(./images/23.jpg);
+    background-color: rgb(193, 183, 183);
     padding: 60px;
 }
+
 .main{
     display: flex;
     width: 70%;
     margin: auto;
 }
+
 .mleft{
-    height: 500px;
+    height: 600px;
     width: 50%;
-    background-color: rgb(250, 102, 255);
+    background-color: white;
 }
+
 .mlogin{
+    padding: 49px;
+    padding-top: 100px;
     width: 80%;
     margin: auto;
+    text-align: center;
 }
+
+.mlogin h1{
+    font-size: 24px;
+    color: grey;
+    font-family: sans-serif;
+}
+
+.mlogin button{
+    margin: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: burlywood;
+    font-size: 20px;
+    padding: 7px 28px;
+    border-radius: 20px;
+}
+
+.mlogin input{
+    margin-top: 15px;
+    width: 320px;
+    height: 23px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+.mlogin p{
+    cursor: pointer;
+}
+
 .mright{
     width: 50%;
-    height: 500px;
-    background-image: url(./images/22.jpg);
+    height: 600px;
+    background-image: url(./images/12.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+/* Media queries for smaller screens */
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+  
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .mleft,
+  .mright {
+    width: 100%;
+    height: auto;
+  }
+  
+  .mlogin {
+    padding-top: 50px;
+  }
+  
+  .mlogin input {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .mlogin button {
+    margin: 10px 0;
+  }
+}
+

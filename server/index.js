@@ -50,6 +50,29 @@ app.post("/signin", async (req, res) => {
       res.status(500).json({ message: err.message });
     }
   });
+
+  app.post("/signup", async (req,res)=>{
+    const {username, password} = req.body;
+    try{
+      const user = await User.find({username});
+      if(!user){
+        const newUser = new User({
+          username: username,
+          password: md5(password),
+        })
+        newUser.save();
+        return res.status(200);
+      }
+      else{
+        return res.status(401);
+      }
+    }
+    catch(err){
+      console.log(err);
+    }
+
+
+  })
   
   
 

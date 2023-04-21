@@ -31,7 +31,9 @@ body{
     color: grey;
     font-family: sans-serif;
 }
-
+p{
+  color: black;
+}
 .mlogin button{
     margin: 10px;
     cursor: pointer;

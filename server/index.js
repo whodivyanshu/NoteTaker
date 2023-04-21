@@ -51,28 +51,50 @@ app.post("/signin", async (req, res) => {
     }
   });
 
-  app.post("/signup", async (req,res)=>{
-    const {username, password} = req.body;
-    try{
-      const user = await User.find({username});
-      if(!user){
+  // app.post("/signup", async (req,res)=>{
+  //   const {username, password} = req.body;
+  //   try{
+  //     const user = await User.findOne({username});
+  //     if(!user){
+  //       const newUser = new User({
+  //         username: username,
+  //         password: md5(password),
+  //       })
+  //       newUser.save();
+  //       return res.status(200);
+  //     }
+  //     else{
+  //       return res.status(401);
+  //     }
+  //   }
+  //   catch(err){
+  //     console.log(err);
+  //   }
+
+
+  // })
+
+  app.post("/signup", async (req, res) => {
+    const { username, password } = req.body;
+    try {
+      const existingUser = await User.findOne({ username });
+      if (existingUser) {
+        return res.status(409).json({ message: "User already exists" });
+      } else {
         const newUser = new User({
+          _id: uuid.v4(),
           username: username,
           password: md5(password),
-        })
-        newUser.save();
-        return res.status(200);
+        });
+        await newUser.save();
+        return res.status(201).json({ message: "User created successfully" });
       }
-      else{
-        return res.status(401);
-      }
-    }
-    catch(err){
+    } catch (err) {
       console.log(err);
+      return res.status(500).json({ message: "Internal server error" });
     }
-
-
-  })
+  });
+  
   
   
 

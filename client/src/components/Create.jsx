@@ -1,11 +1,11 @@
 import React from 'react'
 // import axios from "axios";
-import Login from './Login';
+import SignUp from './SignUp';
 
 
 // import SignUp from './SignUp';
 
-const Main = () => {
+const Create = () => {
 
 
   return (
@@ -13,7 +13,7 @@ const Main = () => {
 
     <div className="main">
         <div className="mleft">
-        <Login/>
+        <SignUp/>
         </div>
         <div className="mright">
 
@@ -23,4 +23,4 @@ const Main = () => {
   )
 }
 
-export default Main
+export default Create;

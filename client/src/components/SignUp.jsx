@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom';
 
 
 const SignUp = () => {
@@ -41,11 +42,15 @@ const SignUp = () => {
     <br />
     <input type="password" placeholder='password' value={password} onChange={(e)=> setPassword(e.target.value)} />
     <input type="password" placeholder='confirm password' value={cpassword} onChange={(e)=> setCpassword(e.target.value)} />
-    <p>Forgot Password</p>
+    {/* <p>Forgot Password</p> */}
 
     <br />
-    <button type='submit'>Sign In</button>
-    <p >Create Account</p>
+    <button type='submit'>Sign Up</button>
+      <Link to="/">
+    <p >
+      Sign In
+      </p>
+      </Link>
   </form>
 </div>
   )

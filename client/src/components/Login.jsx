@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -14,15 +13,13 @@ const Login = () => {
         username: username,
         password: password,
       });
-      alert('User created successfully');
+      alert('Sign In Successfully');
     } catch (err) {
       alert('Error occurred while logging user');
     }
   };
 
-  const handleCreateAccount = () => {
-    navigate('/SignUp');
-  };
+
 
   return (
     <div className="mlogin">
@@ -35,7 +32,12 @@ const Login = () => {
 
         <br />
         <button type="submit">Sign In</button>
-        <p onClick={handleCreateAccount}>Create Account</p>
+        
+          <Link to="/create">
+        <p>
+          Create Account
+          </p>
+          </Link>
       </form>
     </div>
   );

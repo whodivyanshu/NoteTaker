@@ -11,6 +11,10 @@ const Main = () => {
   return (
 
 
+    <div className="body">
+
+
+
     <div className="main">
         <div className="mleft">
         <Login/>
@@ -20,6 +24,7 @@ const Main = () => {
         </div>
     </div>
 
+    </div>
   )
 }
 

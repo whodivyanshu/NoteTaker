@@ -1,9 +1,16 @@
 /* Default styles */
-
-body{
+*{
+  margin: 0;
+  padding: 0;
+}
+Body{
+  background-color: rgb(193, 183, 183);
+  
+}
+.body{
     height: 100%;
-    background-color: rgb(193, 183, 183);
     padding: 60px;
+    /* margin-bottom: 0; */
 }
 
 .main{
@@ -11,7 +18,9 @@ body{
     width: 70%;
     margin: auto;
 }
-
+.mlogin p{
+  margin-top: 15px;
+}
 .mleft{
     height: 600px;
     width: 50%;
@@ -35,7 +44,8 @@ p{
   color: black;
 }
 .mlogin button{
-    margin: 10px;
+
+    margin-top: 20px;
     cursor: pointer;
     border: none;
     background-color: burlywood;

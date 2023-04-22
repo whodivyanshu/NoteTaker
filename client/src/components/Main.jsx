@@ -1,31 +1,20 @@
-import React from 'react'
+import React from "react";
 // import axios from "axios";
-import Login from './Login';
-
+import Login from "./Login";
 
 // import SignUp from './SignUp';
 
 const Main = () => {
-
-
   return (
-
-
     <div className="body">
-
-
-
-    <div className="main">
+      <div className="main">
         <div className="mleft">
-        <Login/>
+          <Login />
         </div>
-        <div className="mright">
-
-        </div>
+        <div className="mright"></div>
+      </div>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default Main
+export default Main;

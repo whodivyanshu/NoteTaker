@@ -22,10 +22,19 @@ mongoose
 const userSchema = new mongoose.Schema({
     _id: String,
     username: String,
-    password: String
+    password: String,
+    notes: [{
+      title: String,
+      content: String
+    }]
 })
 
 const User = mongoose.model("User", userSchema);
+
+app.get("/", async(req,res)=>{
+  const allData = await User.find();
+  res.send(allData);
+})
 
 app.post("/signin", async (req, res) => {
     const { username, password } = req.body;
@@ -51,28 +60,7 @@ app.post("/signin", async (req, res) => {
     }
   });
 
-  // app.post("/signup", async (req,res)=>{
-  //   const {username, password} = req.body;
-  //   try{
-  //     const user = await User.findOne({username});
-  //     if(!user){
-  //       const newUser = new User({
-  //         username: username,
-  //         password: md5(password),
-  //       })
-  //       newUser.save();
-  //       return res.status(200);
-  //     }
-  //     else{
-  //       return res.status(401);
-  //     }
-  //   }
-  //   catch(err){
-  //     console.log(err);
-  //   }
 
-
-  // })
 
   app.post("/signup", async (req, res) => {
     const { username, password } = req.body;

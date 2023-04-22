@@ -7,7 +7,7 @@ const Body = () => {
 
   return (
     <>
-    <header><h1>{username}</h1></header>
+    <header><h1>Hello, {username}</h1></header>
     </>
   )
 }

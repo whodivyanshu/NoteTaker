@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Write = (props) => {
     const username = props.username;
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("")
 
@@ -23,7 +23,8 @@ const Write = (props) => {
             alert("there is a problem on making the note");
             console.log(error);
         }
-        navigate(`/body?username=${username}`)
+        // navigate(`/body?username=${username}`)
+        window.location.reload();
         
         
 

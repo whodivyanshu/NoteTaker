@@ -22,6 +22,9 @@ const Write = (props) => {
             console.log(error);
         }
         window.location.reload();
+        window.location.reload();
+        window.location.reload();
+        window.location.reload();
         
 
     }

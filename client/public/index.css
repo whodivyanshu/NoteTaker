@@ -19,13 +19,58 @@ header h1{
 }
 .notes{
   display: flex;
+  flex-wrap: wrap;
+}
+.write{
+  padding: 35px;
+  border-radius: 30px;
+  position: absolute;
+  top: 10%;
+  left: 13%;
+  box-shadow: 5px 10px;
+  right: 13%;
+  width: 70%;
+  height: 70%;
+  background-color: aquamarine;
+  overflow: auto;
+}
+
+.wtitle textarea{
+  font-weight: bold;
+  font-size: 30px;
+  background: none;
+  resize: none;
+  border: none;
+
+}
+hr{
+  margin: 10px;
+  margin-bottom: 20px;
+}
+.write button{
+  position: absolute;
+  right: 40px;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+}
+.wcontent textarea{
+  font-size: 20px;
+  background: none;
+  border: none;
+  resize: none;
+
+}
+textarea:focus {
+  outline: none;
 }
 
 .note{
-  padding: 20px;
+  padding: 15px;
   border-radius: 30px;
-  margin: 20px;
-  width: 310px;
+  margin: 1%;
+  width: 21%;
   height: 160px;
   /* display: inline; */
   background-color: antiquewhite;

@@ -64,6 +64,28 @@ app.post("/signin", async (req, res) => {
     }
   });
 
+  app.post("/notesubmit", async(req,res)=>{
+    const {username, title, content} = req.body;
+
+    try{
+      const user = await User.findOne({username});
+      if(!user){
+        return res.status(401).json({message: "Try Again"});
+      }
+      const newNote = {title, content};
+      user.notes.push(newNote);
+      await user.save();
+
+      res.status(200).json({message: "Note added successfully!"});
+
+
+    }catch(error){
+      res.status(500).json({message: error.message});
+      console.log(error);
+    }
+    
+
+  })
 
 
   app.post("/signup", async (req, res) => {

@@ -1,8 +1,11 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 const SignUp = () => {
+
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
@@ -14,7 +17,8 @@ const SignUp = () => {
         username: username,
         password: password,
       });
-      alert("created user successfully");
+      // alert("created user successfully");
+      navigate(`/body?username=${username}`)
     } catch (err) {
       console.log(err);
     }

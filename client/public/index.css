@@ -22,9 +22,10 @@ header h1{
   flex-wrap: wrap;
 }
 .write{
+
   padding: 35px;
   border-radius: 30px;
-  position: absolute;
+  position: sticky;
   top: 10%;
   left: 13%;
   box-shadow: 5px 10px;

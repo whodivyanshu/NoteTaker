@@ -13,7 +13,7 @@ const Body = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:4000/getData')
+      .get('https://backend-26qi.onrender.com/getData')
       .then((response) => {
         console.log(response.data);
         const user = response.data.find((user) => user.username === username);

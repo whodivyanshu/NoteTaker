@@ -10,7 +10,7 @@ const Write = (props) => {
         // alert(username);
         e.preventDefault();
         try{
-            await axios.post("http://localhost:4000/notesubmit", {
+            await axios.post("https://backend-26qi.onrender.com/notesubmit", {
                 username: username,
                 title: title,
                 content: content

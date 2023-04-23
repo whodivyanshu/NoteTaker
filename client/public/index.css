@@ -161,7 +161,7 @@ p{
     background-repeat: no-repeat;
 }
 .nmake{
-  position: absolute;
+  position: fixed;
   bottom: 30px;
   right: 30px;
   padding: 5px;

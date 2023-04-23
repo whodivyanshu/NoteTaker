@@ -31,8 +31,12 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-app.get("/", async(req,res)=>{
+
+
+
+app.get("/getData", async(req,res)=>{
   const allData = await User.find();
+  // const jsonData = JSON.stringify(allData);
   res.send(allData);
 })
 
